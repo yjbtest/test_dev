@@ -1,5 +1,5 @@
 print("hello py")
-
 def add(a,b):
-    '''A开发人员开发'''
-    return a+b
+    '''A和B开发人员共同开发'''
+    c = a + b
+    return c
