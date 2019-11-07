@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block base%}
+<title>登陆</title>
+<main id="content" role="main">
+    <!-- Hero Section -->
+    <div class="gradient-overlay-half-dark-v3 bg-img-hero">
+      <!-- Main Content -->
+      <div class="d-lg-flex align-items-lg-center height-85vh--lg" style="background-color: #00a7bc">
+        <div class="container space-2 space-0--lg mt-lg-8">
+          <div class="row justify-content-lg-between align-items-lg-center">
+            <div class="col-lg-5 mb-7 mb-lg-0">
+              <!-- Title -->
+              <span class="d-block text-white text-uppercase mb-2">Join the change</span>
+              <h1 class="display-5 font-size-48--md-down text-white mb-0">接口自动化测试平台</h1>
+              <!-- End Title -->
+            </div>
+
+            <div class="col-lg-5">
+              <!-- Signup Form -->
+              <div class="bg-white shadow-sm rounded p-6">
+                <form class="js-validate" novalidate="novalidate" action="/login/" method="post">
+                  <div class="mb-4">
+                    <h2 class="h4">账号登陆</h2>
+                  </div>
+
+                  <!-- Input -->
+                  <div class="js-form-message mb-3">
+                    <div class="js-focus-state input-group input-group form">
+                      <input type="text" class="form-control form__input" name="username" required="" placeholder="请输入登陆用户名" aria-label="Enter your username">
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+
+                  <!-- Input -->
+                  <div class="js-form-message mb-3">
+                    <div class="js-focus-state input-group input-group form">
+                      <input type="password" class="form-control form__input" name="password" required="" placeholder="请输入密码" aria-label="Enter your password">
+                    </div>
+                  </div>
+                  <!-- End Input -->
+                  <button type="submit" class="btn btn-block btn-primary">登陆</button>
+                    {% csrf_token %}
+                    <p style="color: red">{{ error }}</p>
+                </form>
+              </div>
+              <!-- End Signup Form -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Main Content -->
+    </div>
+
+    <div class="d-lg-flex align-items-lg-center height-15vh--lg">
+      <!-- Bottom Content -->
+      <div class="container space-2 space-0--lg">
+        <!-- Slick Carousel -->
+        <div class="js-slick-carousel u-slick slick-initialized slick-slider" data-autoplay="true" data-speed="5000" data-infinite="true" data-slides-show="6" data-responsive="[{
+               &quot;breakpoint&quot;: 1200,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 4
+               }
+             }, {
+               &quot;breakpoint&quot;: 992,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 4
+               }
+             }, {
+               &quot;breakpoint&quot;: 768,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 3
+               }
+             }, {
+               &quot;breakpoint&quot;: 576,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 3
+               }
+             }, {
+               &quot;breakpoint&quot;: 480,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 2
+               }
+             }]">
+
+  </main>
+{% endblock %}
